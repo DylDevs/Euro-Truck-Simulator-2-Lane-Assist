@@ -1,1 +1,1 @@
-New .exe installer.
+Bug fixes in the TrafficLightDetection.

@@ -9,26 +9,24 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Plugin Creation</title>
-    <meta name="title" content="Plugin Creation">
-    <meta name="description" content="This tutorial page will run you through the creation of a simple plugin that will output the current value of the in game time.">
+    <title>NavigationDetection</title>
+    <meta name="title" content="NavigationDetection">
+    <meta name="description" content="This plugin is used to detect the lane from the route advisor.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://wiki.tumppi066.fi/tutorials/plugincreation/">
+    <link rel="canonical" href="https://wiki.tumppi066.fi/plugins/navigationdetection/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://wiki.tumppi066.fi/tutorials/plugincreation/">
-    <meta property="og:title" content="Plugin Creation">
-    <meta property="og:description" content="This tutorial page will run you through the creation of a simple plugin that will output the current value of the in game time.">
-    <meta property="og:image" content="https://wiki.tumppi066.fi/tutorials/assets/plugincreation/copyplugin.png">
+    <meta property="og:url" content="https://wiki.tumppi066.fi/plugins/navigationdetection/">
+    <meta property="og:title" content="NavigationDetection">
+    <meta property="og:description" content="This plugin is used to detect the lane from the route advisor.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://wiki.tumppi066.fi/tutorials/plugincreation/">
-    <meta property="twitter:title" content="Plugin Creation">
-    <meta property="twitter:description" content="This tutorial page will run you through the creation of a simple plugin that will output the current value of the in game time.">
-    <meta property="twitter:image" content="https://wiki.tumppi066.fi/tutorials/assets/plugincreation/copyplugin.png">
+    <meta property="twitter:url" content="https://wiki.tumppi066.fi/plugins/navigationdetection/">
+    <meta property="twitter:title" content="NavigationDetection">
+    <meta property="twitter:description" content="This plugin is used to detect the lane from the route advisor.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -38,7 +36,6 @@
     <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.760977768588" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.760977768588" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.760977768588" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -205,10 +202,10 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="plugin-creation" class="break-words">
+<doc-anchor-target id="navigationdetection" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#plugin-creation">#</doc-anchor-trigger>
-        <span>Plugin Creation</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#navigationdetection">#</doc-anchor-trigger>
+        <span>NavigationDetection</span>
     </h1>
 </doc-anchor-target>
 <div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
@@ -216,409 +213,129 @@
         <div>By</div>
         <div class="ml-2 flex items-center">
           <div class="shrink-0 w-8 h-8 overflow-hidden rounded-full">
-            <a href="https://github.com/Tumppi066"><img class="object-cover" src="https://avatars.githubusercontent.com/u/83072683?v=4"></a>
+            <a href="https://github.com/Glas42"><img class="object-cover" src="https://avatars.githubusercontent.com/u/145870870?v=4"></a>
           </div>
-          <div class="ml-1 whitespace-nowrap text-gray-500 dark:text-dark-350"><a href="https://github.com/Tumppi066">Tumppi066</a></div>
+          <div class="ml-1 whitespace-nowrap text-gray-500 dark:text-dark-350"><a href="https://github.com/Glas42">Glas42</a></div>
         </div>
     </div>
     <div class="mx-2">&#9679;</div>
-    <div class="flex items-center shrink-0">Published&nbsp;<span>2024-01-31</span></div>
+    <div class="flex items-center shrink-0">Published&nbsp;<span>2024-02-09</span></div>
 </div>
 
-<doc-anchor-target id="introduction">
+<doc-anchor-target id="description">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#introduction">#</doc-anchor-trigger>
-        <span>Introduction</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#description">#</doc-anchor-trigger>
+        <span>Description</span>
     </h3>
 </doc-anchor-target>
-<p>This tutorial page will run you through the creation of a simple plugin that will output the current value of the in game time.<br />
-We will also be sending information to the game, and reading a control value from the user.</p>
-<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-yellow-900 bg-yellow-100 h-6 px-2 text-xs rounded-md">
-    <span>This page is WIP and not yet complete!</span>
-</span></p>
-<doc-anchor-target id="the-plugin-framework">
+<p>This plugin is used to detect the lane from the route advisor.</p>
+<doc-anchor-target id="usage">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#the-plugin-framework">#</doc-anchor-trigger>
-        <span>The plugin framework</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#usage">#</doc-anchor-trigger>
+        <span>Usage</span>
     </h3>
 </doc-anchor-target>
-<p>The plugin framework of ETS2LA is fairly simple. All plugin live in the /plugins folder, these are loaded by the program when it starts up.</p>
-<p>Here&#x27;s some stuff to note on the file and code structure:</p>
+<p>To use this plugin you will have to do these steps:<br />
+Do the Setup of the NavigationDetection Plugin<br />
+Enable a screen capture plugin (BetterCamScreenCapture is recommended)<br />
+Enable the Default Steering Plugin<br />
+Enable the Truck SimAPI<br />
+Enable the SDK Controller<br />
+<strong>It is important to enable all the named plugins above for the plugin to work</strong></p>
+<doc-anchor-target id="configuration--ui">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#configuration--ui">#</doc-anchor-trigger>
+        <span>Configuration / UI</span>
+    </h3>
+</doc-anchor-target>
 <doc-tabs>
-<doc-tab v-cloak id="file-structure">
-<template #title>File structure</template>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">plugins
-├─── plugin
-│   ├─── main.py
-│   ├─── installer.py
-│   ├─── plugin.md
-│   ├─── docs.md</code></pre>
-</doc-codeblock></div>
-<doc-panels>
-   <doc-panel id="badge-variant-dark-text-required-main-py" collapsed>
-       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
-    <span>Required</span>
-</span> ‎ main.py</template>
-<p>This is the main file of the plugin. It will be imported once the program starts up.</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Note</h5>
-<p>You can obviously have other files, but everything must start or be imported from main.py. More on this in the code structure section.</p>
-        </div>
-    </div>
-</div>
-   </doc-panel>
-   <doc-panel id="badge-variant-dark-text-required-installer-py" collapsed>
-       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
-    <span>Required</span>
-</span> ‎ installer.py</template>
-<p>This file is used when the application discovers the plugin for the first time. It usually contains code for installing pip packages, this is included in the example installer.py.</p>
-   </doc-panel>
-   <doc-panel id="badge-variant-ghost-text-optional-plugin-md" collapsed>
-       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
-    <span>Optional</span>
-</span> ‎ plugin.md</template>
-<p>This file contains the information displayed on the left side of this page. It is written in markdown, and is parsed by the application.<br />
-<strong>The name of this file must match the name of the folder it&#x27;s in.</strong></p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Note</h5>
-<p>Documentation can be found on the <a href="https://retype.com">retype website</a>.</p>
-        </div>
-    </div>
-</div>
-   </doc-panel>
-   <doc-panel id="badge-variant-ghost-text-optional-docs-md" collapsed>
-       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
-    <span>Optional</span>
-</span> ‎ docs.md</template>
-<p>This file on the other hand contains information for developers, it will be opened by the button located in the plugin.md file. This is also included in the example plugin.</p>
-   </doc-panel>
-</doc-panels>
+<doc-tab v-cloak id="general">
+<template #title>General</template>
+<doc-panel id="lane-offset" collapsed>
+    <template #title>Lane Offset</template>
+<p>You can set a offset to the center of the lane if the truck is not driving in the middle of the lane.</p>
+</doc-panel>
+<doc-panel id="left-hand-traffic" collapsed>
+    <template #title>Left-hand traffic</template>
+<p>The plugin is able to detect which lane it needs to follow even if multiple lanes are detected, but sometimes it could happen that the automatic lane selection is not working properly, in this case it will switch to a different lane selection method where it needs to know from the user if it is left-hand traffic.</p>
+</doc-panel>
+<doc-panel id="lane-changing" collapsed>
+    <template #title>Lane Changing</template>
+<p>If enabled, you can switch the lane you are driving on using the games indicators or the buttons you set in the controls menu.<br />
+-&gt; Lane Changing Speed: Set the speed of the lane changing.<br />
+-&gt; Lane Width: Set how much the truck has go left or right to change the lane.</p>
+</doc-panel>
 </doc-tab>
-<doc-tab v-cloak id="code-structure">
-<template #title>Code structure</template>
-<p>The program includes some predefined functions. These are used by the main program loop to send extra information to the plugin.</p>
-<doc-panels>
-   <doc-panel id="badge-variant-dark-text-required-plugininfo-plugininformation" collapsed>
-       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
-    <span>Required</span>
-</span> ‎ <code v-pre>PluginInfo = PluginInformation()</code></template>
-<p>This is the class that contains information about the plugin. It is used by the program to display information about the plugin in the plugin manager.</p>
-<p><strong>The plugin example will contain almost everything you need.</strong></p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Note</h5>
-<p>You can check the current state of the file <a href="https://wiki.tumppi066.fi/docs/plugins/plugin.html">on the documentation page</a>.</p>
-        </div>
-    </div>
-</div>
-   </doc-panel>
-   <doc-panel id="badge-variant-dark-text-required-plugin-data" collapsed>
-       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
-    <span>Required</span>
-</span> ‎ <code v-pre>plugin(data)</code></template>
-<p><strong>This is the main function of the plugin.</strong><br />
-It will be run every frame, and the current program data <code v-pre>dictionary</code> will be passed on to it.</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Note</h5>
-<p>It is paramount that you return the <code v-pre>data</code> variable!<br />
-Don&#x27;t worry, the program will shout at you if you forgot <span class="docs-emoji">&#x1F44D;</span></p>
-        </div>
-    </div>
-</div>
-   </doc-panel>
-   <doc-panel id="badge-variant-ghost-text-optional-onenable" collapsed>
-       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
-    <span>Optional</span>
-</span> ‎ <code v-pre>onEnable()</code></template>
-<p>This function is called in two cases:</p>
-<ol>
-<li>When the plugin is enabled and loaded at startup</li>
-<li>When the plugin is enabled through the plugin manager</li>
-</ol>
-<p>This is useful if you for example have to do some heavy calculations. We don&#x27;t want those calculations unnecessarily running when starting up. Thus they will run only when the plugin is actually enabled.</p>
-   </doc-panel>
-   <doc-panel id="badge-variant-ghost-text-optional-ondisable" collapsed>
-       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
-    <span>Optional</span>
-</span> ‎ <code v-pre>onDisable()</code></template>
-<p>This function is called when the plugin is disabled. This is useful for cleaning up any resources that the plugin might have used.</p>
-   </doc-panel>
-   <doc-panel id="badge-variant-ghost-text-optional-class-ui" collapsed>
-       <template #title><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
-    <span>Optional</span>
-</span> ‎ <code v-pre>class UI()</code></template>
-<p>This class is used to create UI for the plugin. We will be using this later on, and it will be explained in more detail then.</p>
-   </doc-panel>
-</doc-panels>
+<doc-tab v-cloak id="setup">
+<template #title>Setup</template>
+<doc-panel id="automatic-setup" collapsed>
+    <template #title>Automatic Setup</template>
+<p>If you press this button, the app will open a setup window, which will guide you through the automatic setup of the NavigationDetection Plugin.<br />
+Make sure that the games route advisor is visible all the time!</p>
+</doc-panel>
+<doc-panel id="manual-setup" collapsed>
+    <template #title>Manual Setup</template>
+<p>If you press this button, the app will open a setup window, where you need to do the following steps:<br />
+-&gt;Press &quot;Set Top Left Coordinate of Map&quot;, then click on the topleft corner of the route advisor.<br />
+-&gt;Press &quot;Set Bottom Right Coordinate of Map&quot;, then click on the bottom right corner of the route advisor.<br />
+-&gt;Press &quot;Set Top Left Coordinate of Arrow&quot;, then click on the topleft corner of the blue arrow in the route advisor.<br />
+-&gt;Press &quot;Set Bottom Right Coordinate of Arrow&quot;, then click on the bottom right corner of the blue arrow in the route advisor.<br />
+-&gt;Press &quot;Finish Setup&quot; to save the changes and close the setup window.<br />
+You can look at the Example Image window (it opens when you start the setup) for more information.</p>
+</doc-panel>
+</doc-tab>
+<doc-tab v-cloak id="advanced">
+<template #title>Advanced</template>
+<doc-panel id="automatically-change-to-lane-0" collapsed>
+    <template #title>Automatically change to lane 0</template>
+<p>If enabled, the plugin will automatically change to the original lane if the plugin detects a upcoming turn.</p>
+</doc-panel>
 </doc-tab>
 </doc-tabs>
-<doc-anchor-target id="how-to-create-plugin">
+<doc-anchor-target id="installation">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#how-to-create-plugin">#</doc-anchor-trigger>
-        <span>How to create plugin?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#installation">#</doc-anchor-trigger>
+        <span>Installation</span>
     </h3>
 </doc-anchor-target>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Note</h5>
-<p>I will be using visual studio code going forward. You can use any editor you want, but vs code is free and lightweight so I&#x27;m going with it. As long as you are not just using notepad you&#x27;ll be absolutely fine.</p>
-        </div>
-    </div>
-</div>
-<p>Creating plugins is actually really simple.<br />
-I have included templates for both plugins and panels <em>(going to be explored later)</em> in the <code v-pre>plugins/Examples/.</code> folder.</p>
-<doc-tabs>
-<doc-tab v-cloak id="step-1">
-<template #title>Step 1</template>
-<doc-anchor-target id="creating-the-plugin">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#creating-the-plugin">#</doc-anchor-trigger>
-        <span>Creating the plugin.</span>
-    </h4>
-</doc-anchor-target>
-<p>The first step is cloning that example plugin folder and renaming it to something else, I will use <code v-pre>PrintGameTime</code> as an example.<br />
-<figure class="content-center">
-    <img src="../assets/plugincreation/copyplugin.png" alt="">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p>This way we will have all the required files and templates ready to go, making the process a lot easier and quicker.</p>
-</doc-tab>
-<doc-tab v-cloak id="step-2">
-<template #title>Step 2</template>
-<doc-anchor-target id="customizing-plugininfo">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#customizing-plugininfo">#</doc-anchor-trigger>
-        <span>Customizing PluginInfo.</span>
-    </h4>
-</doc-anchor-target>
-<p>Now we will want to configure the plugin information. To do this, open the main.py file, and edit the <code v-pre>PluginInfo</code> class.</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-python"><code v-pre class="language-python">PluginInfo = PluginInformation(
-    name=&quot;PrintGameTime&quot;, # This needs to match the folder name under plugins (this would mean plugins\Plugin\main.py)
-    # In case the plugin is not the main file (for example plugins\Plugin\Plugin.py) then the name would be &quot;Plugin.Plugin&quot;
-    
-    description=&quot;This plugin will print the game time to the console when pressing a defined keybind.\nI addition if the time is past 18:00 it will enable the lights,\nand if it's past 9:00 it will disable them.&quot;,
-    version=&quot;0.1&quot;,
-    author=&quot;Tumppi066&quot;,
-    url=&quot;https://github.com/Tumppi066/Euro-Truck-Simulator-2-Lane-Assist&quot;,
-    type=&quot;dynamic&quot;, # = Panel
-    dynamicOrder=&quot;before controller&quot; # Will run the plugin before anything else in the mainloop (data will be empty)
-)</code></pre>
-</doc-codeblock></div>
-<p>Here all I&#x27;ve is configure the name, description, version, author and url.</p>
-<p>Now when you start the app, without doing anything else you should see the installer come up, and then the plugin will be available in the plugin manager.<br />
-<figure class="content-center">
-    <img src="../assets/plugincreation/pluginshowsup.png" alt="">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Note on dynamicOrder</h5>
-<p>This defines where in the apps main loop cycle the plugin will be run. Since we want to send data to the game, we will run before the controller.<br />
-All available options are:</p>
-<ol>
-<li><code v-pre>before image capture</code> / <code v-pre>image capture</code></li>
-<li><code v-pre>before lane detection</code> / <code v-pre>lane detection</code></li>
-<li><code v-pre>before controller</code> / <code v-pre>controller</code></li>
-<li><code v-pre>before game</code> / <code v-pre>game</code></li>
-<li><code v-pre>before UI</code></li>
-<li><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 h-6 px-2 text-xs rounded-md">
-    <span>Reserved for the fps limiter!</span>
-</span> ‎ <code v-pre>last</code></li>
-</ol>
-        </div>
-    </div>
-</div>
-</doc-tab>
-<doc-tab v-cloak id="step-3">
-<template #title>Step 3</template>
-<doc-anchor-target id="getting-data-from-the-game">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#getting-data-from-the-game">#</doc-anchor-trigger>
-        <span>Getting data from the game.</span>
-    </h4>
-</doc-anchor-target>
-<p>Now we are at the fun part!</p>
-<p>We get to start writing the actual code for the plugin in question. Remember how all plugin code should be in the <code v-pre>plugin(data)</code> function? Well that&#x27;s where we are going to start.</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-python"><code v-pre class="language-python">def plugin(data):
-    gameTime = data[&quot;api&quot;][&quot;time&quot;]
-    print(gameTime)
-    return data</code></pre>
-</doc-codeblock></div>
-<ul>
-<li><img src="../assets/plugincreation/printingtime.png" alt="" /><br />
-Seems like it&#x27;s working!<br />
-Do note that it&#x27;s printing only 1s because I&#x27;m using the <code v-pre>VirtualSimAPI</code> here. It&#x27;s convenient since I don&#x27;t have to have the game open to test the plugin.</li>
-</ul>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Note</h5>
-<p>You can use the UI of the <code v-pre>TruckSimAPI</code> plugin to check what data is available at what data path.</p>
-        </div>
-    </div>
-</div>
-</doc-tab>
-<doc-tab v-cloak id="step-4">
-<template #title>Step 4</template>
-<doc-anchor-target id="get-user-inputs">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#get-user-inputs">#</doc-anchor-trigger>
-        <span>Get user inputs.</span>
-    </h4>
-</doc-anchor-target>
-<p>Now that we have the time printing to the console, we can assign a keybind to it.<br />
-For this we can use the already imported <a href="../../src/controls/">src.controls</a> module.</p>
-<div class="codeblock-wrapper"><doc-codeblock line-numbers>
-<pre class="language-python"><code v-pre class="language-python"># Register a keybind. defaultButtonIndex is the default keybind, if a string is passed it will be a keyboard event.
-controls.RegisterKeybind(&quot;Print game time&quot;, defaultButtonIndex=&quot;,&quot;)
-lastPressed = False
-def plugin(data):
-    global lastPressed
-    gameTime = data[&quot;api&quot;][&quot;time&quot;]
-    
-    # Check if the keybind is pressed.
-    if controls.GetKeybindValue(&quot;Print game time&quot;):
-        if not lastPressed:
-            lastPressed = True
-            print(gameTime)
-    elif lastPressed:
-        lastPressed = False
-            
-    return data</code></pre>
-</doc-codeblock></div>
-<p>This is fairly simple too. What we can check now is that the keybind is working as intended, and we can change it in the settings.</p>
-<ul>
-<li><img src="../assets/plugincreation/printwithkeybind.png" alt="" /></li>
-</ul>
-<p>Seems like it&#x27;s working!<br />
-Now let&#x27;s check the controls menu.</p>
-<ul>
-<li><img src="../assets/plugincreation/keybindincontrols.png" alt="" /></li>
-</ul>
-<p>It was put on the second page, but our keybind is indeed there. Now the user can change it to whatever they want.</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
-    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Note on keybinds.</h5>
-<p>You can also get a float value from a controller. To do this add <code v-pre>axis=True</code> to the RegisterKeybind function.<br />
-For more info on the controls module, check out the <a href="https://wiki.tumppi066.fi/docs/src/controls.html">controls page</a>.</p>
-        </div>
-    </div>
-</div>
-</doc-tab>
-<doc-tab v-cloak id="step-5">
-<template #title>Step 5</template>
-<doc-anchor-target id="sending-data-to-the-game">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#sending-data-to-the-game">#</doc-anchor-trigger>
-        <span>Sending data to the game.</span>
-    </h4>
-</doc-anchor-target>
-<p>WIP</p>
-</doc-tab>
-</doc-tabs>
+<p>This plugin will install the following python packages:</p>
+<doc-panels>
+   <doc-panel id="opencv-python">
+       <template #title>opencv-python</template>
+<p>Used for image processing, in this case to detect the lane and draw symbols.</p>
+   </doc-panel>
+   <doc-panel id="numpy">
+       <template #title>numpy</template>
+<p>Used for image processing, in this case we use it to create masks.</p>
+   </doc-panel>
+   <doc-panel id="subprocess">
+       <template #title>subprocess</template>
+<p>Used for launching the setup scripts.</p>
+   </doc-panel>
+   <doc-panel id="ctypes">
+       <template #title>ctypes</template>
+<p>Used to check if F5 is pressed.</p>
+   </doc-panel>
+   <doc-panel id="time">
+       <template #title>time</template>
+<p>Used for timing.</p>
+   </doc-panel>
+   <doc-panel id="os">
+       <template #title>os</template>
+<p>Used to check if necessary files exist.</p>
+   </doc-panel>
+</doc-panels>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
                                         <a href="../../tags/">
                                             <svg class="inline-block -mb-px mr-1.5 text-blue-500 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" overflow="visible" fill="currentColor"><g><path d="M21.3 9.88l-8.59-8.59C12.52 1.11 12.27 1 12 1H2c-.55 0-1 .45-1 1v10c0 .27.11.52.29.71l8.59 8.58c.57.57 1.32.88 2.12.88s1.55-.31 2.12-.88l7.17-7.17a3.009 3.009 0 00.01-4.24zm-1.42 2.82l-7.17 7.17c-.39.39-1.02.39-1.42 0L3 11.59V3h8.59l8.29 8.29c.39.39.39 1.03 0 1.41z" /><path d="M7.01 6C6.45 6 6 6.45 6 7s.45 1 1 1 1-.45 1-1-.44-1-.99-1z" /></g></svg>
                                         </a>
-                                        <span class="mr-2"><a href="../../tags/tutorial/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-                                    <span>tutorial</span>
+                                        <span class="mr-2"><a href="../../tags/plugin/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>plugin</span>
+                                </a></span>
+                                        <span class="mr-2"><a href="../../tags/lane-detection/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>lane detection</span>
                                 </a></span>
                                     </span>
                                 </div>
@@ -630,20 +347,20 @@ For more info on the controls module, check out the <a href="https://wiki.tumppi
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../tutorials/installation/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../plugins/deeptranslator/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Installation</span>
+                                                <span class="block mt-1">Deep​Translator</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../faq/tracking/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../plugins/trafficlightdetection/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Tracking</span>
+                                                <span class="block mt-1">Traffic​Light​Detection</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -690,6 +407,6 @@ For more info on the controls module, check out the <a href="https://wiki.tumppi
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Plugin Creation", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "NavigationDetection", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
