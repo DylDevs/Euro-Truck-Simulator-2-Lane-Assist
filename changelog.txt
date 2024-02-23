@@ -1,1 +1,1 @@
-- Fixed small DefaultSteering bug
+The MSS Screen Capture now works for all plugins. BetterCamScreenCapture is still recommended and MSS is only a backup.
