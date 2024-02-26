@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.761969295016">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.762299721154">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -34,11 +34,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../assets/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.761969295016" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.762299721154" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.761969295016" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.762299721154" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.761969295016" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.762299721154" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -249,6 +249,81 @@
     </div>
 </div>
 <doc-panels>
+   <doc-panel id="version-1-10-30" collapsed>
+       <template #title>Version 1.10.30</template>
+<p>Fix vertical height when bottom fps counter or copyright notice is enabled.<br />
+<span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Tumppi066</span>
+</span> <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Main UI</span>
+</span> <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>UI Settings</span>
+</span></p>
+   </doc-panel>
+   <doc-panel id="version-1-10-29" collapsed>
+       <template #title>Version 1.10.29</template>
+<p>The app now supports non main monitors.<br />
+<span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Glas42</span>
+</span> <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Setup Scripts</span>
+</span></p>
+   </doc-panel>
+   <doc-panel id="version-1-10-28" collapsed>
+       <template #title>Version 1.10.28</template>
+<p>Fix favorites bar not working correctly. (ony the last favorite would be opened, regardless of which one was clicked)<br />
+<span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Tumppi066</span>
+</span> <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Main UI</span>
+</span></p>
+   </doc-panel>
+   <doc-panel id="version-1-10-27" collapsed>
+       <template #title>Version 1.10.27</template>
+<p>Fix UIs and PluginFrames not correctly resetting. This manifested as weird UI bugs after a reload.<br />
+Added a favorites bar.<br />
+Slightly tweaked the plugin manager to make it fit in the frame correctly.<br />
+<span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Tumppi066</span>
+</span> <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Main UI</span>
+</span> <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Plugin Manager</span>
+</span></p>
+   </doc-panel>
+   <doc-panel id="version-1-10-26" collapsed>
+       <template #title>Version 1.10.26</template>
+<p>The app will no longer hang when the server is not available.<br />
+<span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Tumppi066</span>
+</span> <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>App Backend</span>
+</span></p>
+   </doc-panel>
+   <doc-panel id="version-1-10-25" collapsed>
+       <template #title>Version 1.10.25</template>
+<p>Fix first UI disappearing on startup.<br />
+<span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Tumppi066</span>
+</span> <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Main UI</span>
+</span></p>
+   </doc-panel>
+   <doc-panel id="version-1-10-24" collapsed>
+       <template #title>Version 1.10.24</template>
+<p><strong>Add pinging the server. This is used to determine current user count. (NO DATA IS SENT)</strong><br />
+Hopefully fix some issues with the plugin installers.<br />
+Migrate the Main Menu to be a panel, instead of being hard coded.<br />
+Added an MOTD to the Main Menu.<br />
+(devs) add control of line height to empty lines</p>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-white bg-gray-700 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Tumppi066</span>
+</span> <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>App Backend</span>
+</span> <span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-gray-600 bg-white border border-gray-300 dark:text-dark-350 dark:border-dark-450 dark:bg-dark-450 h-6 px-2 text-xs rounded-md">
+    <span>Main Menu</span>
+</span></p>
+   </doc-panel>
    <doc-panel id="version-1-10-23" collapsed>
        <template #title>Version 1.10.23</template>
 <p>The app can now automatically scale based on the windows scaling setting. This can be toggled on/off from settings -&gt; ui settings.<br />

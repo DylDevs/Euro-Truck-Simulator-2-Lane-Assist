@@ -1,1 +1,1 @@
-The MSS Screen Capture now works for all plugins. BetterCamScreenCapture is still recommended and MSS is only a backup.
+Fix vertical height when bottom fps counter or copyright notice is enabled.
