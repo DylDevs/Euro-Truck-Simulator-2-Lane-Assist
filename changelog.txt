@@ -1,1 +1,1 @@
-Fix vertical height when bottom fps counter or copyright notice is enabled.
+Try and force the creation of mainUI.root to fix errors.

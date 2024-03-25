@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.762734840262">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.764642909847">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -31,11 +31,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../../assets/favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.5.0.762734840262" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.764642909847" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.762734840262" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.764642909847" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.762734840262" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.764642909847" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.764642909847" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -219,7 +220,7 @@
         </div>
     </div>
     <div class="mx-2">&#9679;</div>
-    <div class="flex items-center shrink-0">Published&nbsp;<span>2024-01-30</span></div>
+    <div class="flex items-center shrink-0">Published&nbsp;<span>2024-03-03</span></div>
 </div>
 
 <p>
@@ -248,6 +249,189 @@
         </div>
     </div>
 </div>
+<doc-anchor-target id="manual-installation">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#manual-installation">#</doc-anchor-trigger>
+        <span>Manual Installation</span>
+    </h2>
+</doc-anchor-target>
+<p>This is a guide for installing the app manually. Manual installation doesn&#x27;t use any .exe or .bat files, but is also less convenient than the installer.</p>
+<div class="mb-6 overflow-hidden border rounded-md docs-columns dark:border-dark-650" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white border-r">
+        <span>Features you will miss:</span>
+    </div>
+    <div class="flex items-center px-5 py-3 font-medium leading-snug text-gray-900 border-b border-gray-200 dark:border-dark-650 dark:text-white">
+        <span>Features you will still have:</span>
+    </div>
+    <div class="px-5 py-3 docs-columns-content border-r border-gray-200 dark:border-dark-650">
+<ul>
+<li>A shortcut to the app on your desktop / start menu.</li>
+<li>A virtual python environment for the app, we will install everything globally.</li>
+<li>Access to the debug script (send us data when we&#x27;re troubleshooting).</li>
+</ul>
+    </div>
+    <div class="px-5 py-3 docs-columns-content">
+<ul>
+<li>Automatic updates (if you use the git download method).</li>
+<li>And every app feature the installer has too (the versions are identical, and get pulled from the same repository).</li>
+</ul>
+    </div>
+</div>
+<p>‎</p>
+<doc-anchor-target id="step-1-download-python-and-git">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-1-download-python-and-git">#</doc-anchor-trigger>
+        <span>Step 1: Download python and git</span>
+    </h4>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="python">
+       <template #title>Python</template>
+<ul>
+<li>Go to the <a href="https://www.python.org/downloads/">Python website</a> and download the latest version of Python 3.11 (as of writing this is <a href="https://www.python.org/ftp/python/3.11.8/python-3.11.8-amd64.exe">3.11.8</a>).</li>
+<li>Make sure to enable <strong>Add python to Path</strong> during the installation.</li>
+<li>Other settings can be on default.</li>
+</ul>
+   </doc-panel>
+   <doc-panel id="git">
+       <template #title>Git</template>
+<ul>
+<li>Go to the <a href="https://git-scm.com/download/win">Git website</a> and download the latest version of Git.</li>
+<li>The settings can all be on default.</li>
+</ul>
+   </doc-panel>
+</doc-panels>
+<p>‎</p>
+<doc-anchor-target id="step-2-download-the-app">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-2-download-the-app">#</doc-anchor-trigger>
+        <span>Step 2: Download the app</span>
+    </h4>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="with-git-recommended" collapsed>
+       <template #title>With Git (recommended)</template>
+<ul>
+<li>Make a new folder for the app, preferably <code v-pre>C:\LaneAssist\</code> as that is the default location the installer uses.</li>
+<li>Open a cmd or powershell in that folder.
+<ul>
+<li>Either right click empty space in the folder while holding shift and select <code v-pre>Open Powershell window here</code> or <code v-pre>Open cmd window here</code>.</li>
+<li>Or open a cmd or powershell and navigate to the folder with <code v-pre>cd C:\LaneAssist\</code>.</li>
+</ul>
+</li>
+<li>Run the following command to clone the app to the <code v-pre>C:\LaneAssist\app</code> folder.<br />
+<code v-pre>git clone https://github.com/Tumppi066/Euro-Truck-Simulator-2-Lane-Assist.git app</code></li>
+<li>Move your console to that folder: <code v-pre>cd app</code></li>
+</ul>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-blue-500 dark:text-blue-400" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Note</h5>
+<p>If this part for some reason fails, try and restart your computer.</p>
+        </div>
+    </div>
+</div>
+   </doc-panel>
+   <doc-panel id="without-git" collapsed>
+       <template #title>Without Git</template>
+<ul>
+<li>Go to the <a href="https://github.com/Tumppi066/Euro-Truck-Simulator-2-Lane-Assist">app repository</a> and click the green <code v-pre>Code</code> button and select <code v-pre>Download ZIP</code>.</li>
+<li>Extract the zip file to <code v-pre>C:\LaneAssist\app</code>.</li>
+<li>Open a new cmd or powershell in the folder.
+<ul>
+<li>Either right click empty space in the folder while holding shift and select <code v-pre>Open Powershell window here</code> or <code v-pre>Open cmd window here</code>.</li>
+<li>Or open a cmd or powershell and navigate to the folder with <code v-pre>cd C:\LaneAssist\app</code>.</li>
+</ul>
+</li>
+</ul>
+   </doc-panel>
+</doc-panels>
+<p>‎</p>
+<doc-anchor-target id="step-3-install-the-app">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-3-install-the-app">#</doc-anchor-trigger>
+        <span>Step 3: Install the app</span>
+    </h4>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="with-the-custom-install-py-script" collapsed>
+       <template #title>With the custom <code v-pre>install.py</code> script.</template>
+<ul>
+<li>Make sure you have a cmd or powershell open in the <code v-pre>C:\LaneAssist\app</code> folder.</li>
+<li>Run the following command to install the app.
+<ul>
+<li><code v-pre>python install.py</code></li>
+</ul>
+</li>
+</ul>
+   </doc-panel>
+   <doc-panel id="without-the-custom-install-py-script" collapsed>
+       <template #title>Without the custom <code v-pre>install.py</code> script.</template>
+<ul>
+<li>Make sure you have a cmd or powershell open in the <code v-pre>C:\LaneAssist\app</code> folder.</li>
+<li>Run the following command to install the app.
+<ul>
+<li><code v-pre>pip install -r requirements.txt</code></li>
+</ul>
+</li>
+</ul>
+   </doc-panel>
+</doc-panels>
+<p>‎</p>
+<doc-anchor-target id="step-4-run-the-app">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#step-4-run-the-app">#</doc-anchor-trigger>
+        <span>Step 4: Run the app</span>
+    </h4>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="with-a-shortcut-we-will-create" collapsed>
+       <template #title>With a shortcut we will create.</template>
+<ul>
+<li>Create the <code v-pre>run.bat</code> file in the <code v-pre>C:\LaneAssist</code> folder.</li>
+<li>Type the following into the file and save it.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-batch"><code v-pre class="language-batch">@echo off
+cd app
+python main.py
+pause</code></pre>
+</doc-codeblock></div>
+<ul>
+<li>You can now easily run the app by double clicking the <code v-pre>run.bat</code> file.</li>
+<li>You can also right click the <code v-pre>run.bat</code> file and select <code v-pre>Send to</code> -&gt; <code v-pre>Desktop (create shortcut)</code> to create a shortcut on your desktop.</li>
+</ul>
+   </doc-panel>
+   <doc-panel id="without-a-shortcut" collapsed>
+       <template #title>Without a shortcut</template>
+<ul>
+<li>Make sure you have a cmd or powershell open in the <code v-pre>C:\LaneAssist\app</code> folder.</li>
+<li>Run the following command to run the app.
+<ul>
+<li><code v-pre>python main.py</code></li>
+</ul>
+</li>
+</ul>
+   </doc-panel>
+</doc-panels>
+<p>‎</p>
+<doc-anchor-target id="troubleshooting">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
+        <span>Troubleshooting</span>
+    </h4>
+</doc-anchor-target>
+<p>There are no known issues yet, if you find one, then please report it to me on <a href="https://discord.gg/DpJpkNpqwD">Discord</a></p>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
@@ -267,11 +451,11 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../wip/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../tutorials/debug/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">WIP</span>
+                                                <span class="block mt-1">How to Run a Debug</span>
                                             </span>
                                         </a>
                                     </div>
@@ -327,6 +511,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Installation", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Installation", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
